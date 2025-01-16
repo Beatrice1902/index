@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Invitație la Nuntă - Beatrice & Sergiu - 28 iunie 2025</title>
+    
+    <!-- Leagă fișierul CSS extern -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="phone-container">
+        <!-- Imaginea de fundal -->
+        <div class="image-container">
+            <img src="imag1.jpg" alt="Imagine de fundal">
+        </div>
+        <div class="image-container">
+            <img src="imag2.png" alt="Imagine de fundal">
+        </div>
+        <div class="text-container">
+            <p>Pentru mai multe detalii vă rugăm selectați una din opțiunile de mai jos:</p>
+        </div>
+
+        <!-- Taburi cu linkuri pentru navigare directă -->
+        <div class="tabs">
+            <a href="#content1" class="tab">Despre Noi</a>
+            <a href="#content2" class="tab">Cununie</a>
+            <a href="#content3" class="tab">Petrecere</a>
+            <a href="#content4" class="tab">Contact</a>
+        </div>
+
+        <!-- Conținutul taburilor -->
+        <div id="content1" class="tab-content">
+            <img src="imag3.png" alt="Fotografie rotundă" class="round-image">
+            <img src="imag4.png" alt="Fotografie normală" class="normal-image">
+        </div>
+
+        <div id="content2" class="tab-content">
+  <div class="tabs">
+            <a href="#content1" class="tab">Despre Noi</a>
+            <a href="#content2" class="tab">Cununie</a>
+            <a href="#content3" class="tab">Petrecere</a>
+            <a href="#content4" class="tab">Contact</a>
+        </div>
+            <img src="imag11.png" alt="Fotografie normală" class="normal-image">
+            <img src="imag12.png" alt="Fotografie normală" class="normal-image">
+        </div>
+
+        <div id="content3" class="tab-content">
+  <div class="tabs">
+            <a href="#content1" class="tab">Despre Noi</a>
+            <a href="#content2" class="tab">Cununie</a>
+            <a href="#content3" class="tab">Petrecere</a>
+            <a href="#content4" class="tab">Contact</a>
+        </div>
+            <img src="imag13.png" alt="Fotografie normală" class="normal-image">
+        </div>
+
+        <div id="content4" class="tab-content">
+  <div class="tabs">
+            <a href="#content1" class="tab">Despre Noi</a>
+            <a href="#content2" class="tab">Cununie</a>
+            <a href="#content3" class="tab">Petrecere</a>
+            <a href="#content4" class="tab">Contact</a>
+        </div>
+            <img src="imag14.png" alt="Fotografie normală" class="normal-image">
+        </div>
+    </div>
+
+    <script>
+        function updateTabStatusOnScroll() {
+            var sections = document.querySelectorAll('.tab-content');
+
+            sections.forEach(function(section) {
+                var rect = section.getBoundingClientRect();
+                var tabs = document.querySelectorAll('.tabs .tab');
+
+                if (rect.top >= 0 && rect.top <= window.innerHeight) {
+                    tabs.forEach(function(tab) {
+                        tab.classList.add('active-tab-style');
+                    });
+                } else {
+                    tabs.forEach(function(tab) {
+                        tab.classList.remove('active-tab-style');
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateTabStatusOnScroll);
+        document.addEventListener('DOMContentLoaded', updateTabStatusOnScroll);
+    </script>
+</body>
+</html>

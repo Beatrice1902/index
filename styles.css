@@ -1,0 +1,124 @@
+/* Fonturi importate */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.phone-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f3f7f2;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tabs .tab {
+    flex: 1;
+    margin: 0 5px;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #dbe8d7;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tabs .tab:hover {
+    background-color: #b0b0b0;
+    color: white;
+}
+
+.tabs .tab.active-tab-style {
+    background-color: #dbe8d7;
+    color: black;
+}
+
+.tab-content {
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #ffffff;
+    border: 4px solid #fae6e7;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.round-image {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.normal-image {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .tabs .tab {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .text-container {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabs {
+        flex-direction: row; /* Menține taburile pe un singur rând */
+        flex-wrap: nowrap; /* Previne trecerea taburilor pe alte rânduri */
+        justify-content: space-between; /* Distribuie spațiul uniform */
+    }
+
+    .tabs .tab {
+        margin: 2px; /* Reduce spațiul dintre taburi */
+        flex: 1 1 22%; /* Ajustează lățimea fiecărui tab să fie fixă și uniformă */
+        white-space: nowrap; /* Previne textul să ocupe mai multe linii */
+        padding: 8px 5px; /* Ajustează padding-ul pentru a economisi spațiu */
+        box-sizing: border-box; /* Include padding-ul în dimensiuni */
+    }
+}
